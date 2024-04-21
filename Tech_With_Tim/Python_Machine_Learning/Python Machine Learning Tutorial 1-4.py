@@ -31,7 +31,7 @@ data = data[['G1', 'G2', 'G3', 'studytime', 'failures', 'absences']]
 
 predict = 'G3'
 
-X = np.array(data.drop([predict], 1))
+X = np.array(data.drop([predict], axis=1))
 y = np.array(data[predict])
 x_train, x_test, y_train, y_test = sklearn.model_selection.train_test_split(
     X, y, test_size=0.1)
@@ -68,6 +68,7 @@ for x in range(len(predictions)):
     print(predictions[x], x_test[x], y_test[x])
 
 p = 'absences'
+#p = 'G1'
 style.use('ggplot')
 pyplot.scatter(data[p], data['G3'])
 pyplot.xlabel(p)
