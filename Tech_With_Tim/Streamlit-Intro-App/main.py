@@ -5,7 +5,6 @@ https://www.youtube.com/watch?v=2siBrMsqF44
 
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
 
 #st.write("Hello world!")
 #st.write({"key": ["value", "value2"]})
